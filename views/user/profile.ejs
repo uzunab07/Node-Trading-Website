@@ -1,0 +1,96 @@
+
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <h2>Welcome,  <%= user.firstName%> </h2>
+    <%if(cars.length>0){%>
+      <h3>Your Trades</h3>
+      <table id="table">
+          <tr class="tr">
+               <th class="th">Brand</th>
+               <th class="th">Model</th>
+               <th class="th">Category</th>
+               <th class="th">Status</th>
+          </tr>
+          <% for(var j= 0; j< cars.length; j++){%>
+               <tr>
+                    <td class="td"><%=cars[j].brand%></td>
+                    <td class="td"><%=cars[j].model%></td>
+                    <td class="td"><%=cars[j].category%></td> 
+                    <td class="td"><%=cars[j].status%></td> 
+                    <td class="td"> 
+                    <form>
+                         <button style="margin-left: 200px;width: 75px;"  type = "submit" formmethod = "GET" formaction = "/cars/<%=cars[j].id%>/edit">Edit</button>
+                         <button type = "submit" style="width: 75px;" formmethod = "POST" formaction = "/cars/<%=cars[j].id%>?_method=DELETE">Delete</button>
+                         <%if(j < offers.length && (user.id == offers[j].author.id || user.id ==offers[j].recipient.id) && cars[j].status=='Offer pending'){%>
+                         <button type = "submit" style="width: 75px;" formmethod = "Post" formaction = "/users/offer/<%=offers[j].myCar%>">Manage Offer</button>
+                        <%}%>
+                       
+                    </form>
+                    </td>   
+               </tr>
+           <%}%>  
+          
+      </table>
+    <% }else{%>
+          <h3>Your have no trades</h3>
+    <% }%>
+    <%if(fav.length>0){%>
+     <h3>Your Watched Trades</h3>
+     <table id="table">
+         <tr class="tr">
+              <th class="th">Brand</th>
+              <th class="th">Model</th>
+              <th class="th">Category</th>
+              <th class="th">Status</th>
+         </tr>
+         <% for(var j= 0; j< fav.length; j++){%>
+              <tr>
+                   <td class="td"><a href="/cars/<%= fav[j].car.id%>"><%=fav[j].car.brand%></a></td>
+                   <td class="td"><%=fav[j].car.model%></td>
+                   <td class="td"><%=fav[j].car.category%></td> 
+                   <td class="td"><%=cars[j].status%></td> 
+                   <td class="td"> 
+                   <form>
+                        <button type = "submit" style="width: 75px;" formmethod = "POST" formaction = "/users/<%=fav[j].car.id%>?_method=DELETE">UnWatch</button>
+                   </form>
+                   </td>   
+              </tr>
+          <%}%>  
+         
+     </table>
+   <% }%>
+   <%if(offers.length>0){%>
+     <h3>Your Ofers</h3>
+     <table id="table">
+         <tr class="tr">
+              <th class="th">Brand</th>
+              <th class="th">Model</th>
+              <th class="th">Category</th>
+              <th class="th">Status</th>
+         </tr>
+         <% for(var j= 0; j< offers.length; j++){%>
+         <% if((user.id == offers[j].author.id || user.id ==offers[j].recipient.id)){%>
+              <tr>
+                   <td class="td"><a href="/cars/<%= offers[j].likeCar.id%>"><%=offers[j].likeCar.brand%></a></td>
+                   <td class="td"><%=offers[j].likeCar.model%></td>
+                   <td class="td"><%=offers[j].likeCar.category%></td> 
+                   <td class="td"><%=offers[j].likeCar.status%></td> 
+                   <% if(user.id == offers[j].author.id){%>
+                   <td class="td">  
+                   <form>
+                  
+                        <button type = "submit" style="width: 75px;" formmethod = "POST" formaction = "/users/offer/<%=offers[j].likeCar.id%>?_method=DELETE">Cancel Offer</button>
+                    
+                   </form>
+                   </td>
+                   <%}%>   
+              </tr>
+              <%}%>   
+          <%}%>  
+         
+     </table>
+   <% }else{%>
+     <H1>No offers</H1>
+     <%}%>
+    </div>
+    <%- include('../partials/footer.ejs')%>

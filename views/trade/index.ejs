@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs')   %>
+<body>
+    <section class="content">
+        <% if(cars.length>0){%>
+        <% for(var i= 0; i< categories.length; i++){%>
+
+            <h1> <%= categories[i].category %></h1><br><br>
+            <% for(var j= 0; j< cars.length; j++){%>
+                <% if(cars[j].category == categories[i].category){%>
+                     <a href="/cars/<%= cars[j].id%>"> <p> <%= cars[j].model %></p><br></a>
+                <%}%>    
+            <%}%>  
+        <%}%>
+        <%} else{ %> <h2>There are no more Cars</h2> <%}%>
+    </section>
+</body>
+
+<%- include('../partials/footer.ejs')   %>

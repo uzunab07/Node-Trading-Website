@@ -1,0 +1,40 @@
+
+
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <h2>Welcome,  <%= user.firstName%> </h2>
+    <%if(cars.length>0){%>
+      <h3>Your Trades</h3>
+      <table id="table">
+          <tr class="tr">
+               <th class="th"> </th>
+               <th class="th">Brand</th>
+               <th class="th">Model</th>
+               <th class="th">Category</th>
+               <th class="th">Status</th>
+          </tr>
+
+          <%=liked_car_id%>
+
+        <form action="/users/trades" method="POST">
+           
+             <% for(var j= 0; j< cars.length; j++){%>
+               
+                <tr>
+                    <td class="td"><input type="radio" id="html" name="car" value="<%=cars[j].id%>"></td>
+                    <td class="td"><%=cars[j].brand%></td>
+                    <td class="td"><%=cars[j].model%></td>
+                    <td class="td"><%=cars[j].category%></td> 
+                    <td class="td"><%=cars[j].status%></td>  
+                </tr>
+            <%}%>
+            
+             
+      </table>
+      <input type="submit" value="Trade">
+    </form >
+    <% }else{%>
+          <h3>Your have no trades</h3>
+    <% }%>
+</div>
+    <%- include('../partials/footer.ejs')%>

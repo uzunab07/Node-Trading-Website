@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs')   %>
+
+<body>
+    <div class="flexbox-container-trade">
+        <div class="flexbox-item flexbox-item-1-trade">
+            <img src="<%=offer.myCar.img %>" width="650" height="400" alt="Car"><br>
+        </div>
+        <div class="flexbox-item flexbox-item-1-trade">
+            <img src="<%=offer.likeCar.img %>" width="650" height="400" alt="Car">
+        </div>
+       
+
+      
+    </div>  
+    <form  >
+           
+        <button type = "submit" style="width: 75px;" formmethod = "POST" formaction = "/users/offer/<%=offer.likeCar.id%>?_method=DELETE">Cancel Offer</button>
+
+         <%if(offer.recipient.id ==user){%>
+         <button style="margin-left: 200px;width: 75px;margin-top: 30px;"  type = "submit" formmethod = "POST" formaction = "/users/<%=offer.myCar.id%>/done">Accept Trade</button>
+         <%}%> 
+    </form>
+  
+  
+</body>
+
+<%- include('../partials/footer.ejs')   %>

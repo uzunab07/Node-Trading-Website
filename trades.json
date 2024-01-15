@@ -1,0 +1,92 @@
+[{
+  "_id": {
+    "$oid": "638557c46f7ade32b6498239"
+  },
+  "model": "IS 500 sport",
+  "brand": "Lexus",
+  "details": "It's a V8-powered, rear-wheel-drive small luxury sedan that's great for someone looking for a capable and comfortable sport sedan. Its non-turbo V8 is the same one found in the LC 500 and RC F coupes and it cranks out a stout 472 horsepower.",
+  "category": "Category 2022",
+  "img": "https://www.lexusofhuntsville.com/static/brand-lexus/vehicle/2023/IS-500/LEX-ISF-MY23-0001.08.png",
+  "author": {
+    "$oid": "638554f380c4b4e4eb61ea71"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6385587e6f7ade32b649825c"
+  },
+  "model": "Camry",
+  "brand": "Lexus",
+  "details": "Toyota didn't settle for upgrading just the looks of the 2019 Camry, they gave it a ride that feels smoother and sharper through the harmony of the Camry's independent McPherson strut front suspension. The standard engine, a 2.5L 4-cylinder, utilizes the D-4S dual-injection system, however, select models can be upgraded to a 3.5L V6 engine. Both engine options come paired to a newly developed Direct Shift 8-Speed Automatic Transmission, which improves acceleration from a stop and fuel efficiency. It also provides a smoother ride at highway speeds. When paired with the sophisticated multi-link rear suspension, you can be confident that you are ready to take on any trip, from across New Hampton to across the country.",
+  "category": "Category 2019",
+  "img": "https://crdms.images.consumerreports.org/c_lfill,w_720,q_auto,f_auto/prod/cars/chrome/white/2019TOC020018_1280_07",
+  "author": {
+    "$oid": "638557ff6f7ade32b6498253"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63855a0c6f7ade32b649828b"
+  },
+  "model": "Fusion 2019",
+  "brand": "Ford",
+  "details": "What Is the 2019 Ford Fusion? The Ford Fusion is a mid-size sedan that seats up to five people. A 175-horsepower, 2.5-liter four-cylinder engine is standard, but a selection of turbocharged engines is available, including a 325-hp, twin-turbo 2.7-liter V-6 that goes in the Sport trim level.",
+  "category": "Category 2019",
+  "img": "https://media.ford.com/content/fordmedia/fna/us/en/news/2018/03/20/sleeker-smarter-2019-ford-fusion/jcr:content/image.img.881.495.jpg/1550178169079.jpg",
+  "author": {
+    "$oid": "638557ff6f7ade32b6498253"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63855a5a6f7ade32b6498291"
+  },
+  "model": "Avantador S",
+  "brand": "Lamborghini",
+  "details": "The Aventador's non-turbo 6.5-liter V12 engine sends 740 horsepower and 509 lb-ft of torque to all four wheels via a seven-speed single-clutch automatic transmission. The Aventador SVJ bumps that power up to 759 hp and 531 lb-ft of torque.",
+  "category": "Category 2019",
+  "img": "https://i.ytimg.com/vi/WOUOzu14mn0/maxresdefault.jpg",
+  "author": {
+    "$oid": "638557ff6f7ade32b6498253"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63855aa56f7ade32b649829c"
+  },
+  "model": "Class C",
+  "brand": "Mercedez",
+  "details": "Starting at $44,600. Highs High-tech cabin, S-class-inspired looks, punchy turbo four-cylinder powertrain. Lows Flinty ride, vague steering feel, interior features are too reliant on touchscreens. Verdict The redesigned C-class continues its tradition of offering high-end substance in an affordable and compact package.",
+  "category": "Category 2022",
+  "img": "https://di-uploads-pod1.dealerinspire.com/mercedesbenzofmilwaukeenorth/uploads/2021/10/2022-Mercedes-Benz-C-Class.jpg",
+  "author": {
+    "$oid": "638557ff6f7ade32b6498253"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63855b1f6f7ade32b64982a7"
+  },
+  "model": "4 Matic",
+  "brand": "Mercedez",
+  "details": "From winter storms to tight corners, 4MATIC all-wheel drive maximizes traction by engaging all four wheels, so you can always put your best foot forward.",
+  "category": "Category 2019",
+  "img": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Mercedes-Benz_GLE_450_4Matic_Genf_2019_1Y7A5103.jpg",
+  "author": {
+    "$oid": "638554f380c4b4e4eb61ea71"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63855b846f7ade32b64982b2"
+  },
+  "model": "Cross",
+  "brand": "Toyota",
+  "details": "\r\nImage result for Toyota cross 2022 description\r\nAll Corolla Cross models will come with a 169-hp 2.0-liter four-cylinder engine and a continuously variable automatic transmission; front-wheel drive is standard, but all-wheel drive is available as an option.",
+  "category": "Category 2022",
+  "img": "https://www.toyota.com/imgix/content/dam/toyota/jellies/max/2022/corollacross/xle/6305/1k3/2.png?fm=webp&bg=white&w=768&h=328&q=90",
+  "author": {
+    "$oid": "638554f380c4b4e4eb61ea71"
+  },
+  "__v": 0
+}]

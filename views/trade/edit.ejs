@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs')   %>
+
+
+<body>
+    <div class = "content">
+    <form action="/cars/<%=car.id%>?_method=PUT" method="post">
+        <table>
+            <tr>
+                <td><label >Model</label></td>
+               <td><input type="text" name="model" required placeholder="Model" id="model" value="<%=car.model%>" class = "fixed-width"></td>
+            </tr>
+            <tr>
+                <td class = "align-top"><label >Details</label></td>
+                <td><textarea rows="10" name="details" required  id="details" minlength="10"  class = "fixed-width" ><%=car.details%></textarea></td>
+            </tr>
+            <tr>
+                <td><label >Image Url</label></td>
+                <td><input type="text" name="img" required placeholder="ulr"  value="<%=car.img%>" id="brand" class = "fixed-width" ></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button>Submit</button></td>
+            </tr>
+        
+    </table>
+    </form>
+</div>
+</body>
+
+
+<%- include('../partials/footer.ejs')   %>

@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs')   %>
+
+<body>
+    <div class="flexbox-container-trade">
+        <div class="flexbox-item flexbox-item-1-trade">
+            <img src="<%=car.img %>" width="650" height="400" alt="Car">
+        </div>
+        <div class="flexbox-item flexbox-item-2-trade">
+            <h2><%=car.model%></h2>
+        </div>
+        <form  >
+            <%if(user != car.author._id){%>
+            <button style="margin-left: 200px;width: 75px;margin-top: 250px;"  type = "submit" formmethod = "POST" formaction = "/users/trade/<%=car.id%>">Trade</button>
+            <%if(fav){%>
+             <button type = "submit" style="width: 75px;" formmethod = "POST" formaction = "/users/<%=car.id%>?_method=DELETE">UnWatch</button>
+            <%}else{%>
+             <button style="margin-left: 200px;width: 75px;margin-top: 30px;"  type = "submit" formmethod = "POST" formaction = "/users/<%=car.id%>/profile">Watch</button>
+             <%}%>
+             <%}%>
+        </form>
+    </div>  
+    <div class="description"> 
+    <h2>Details</h2>
+    <p> <%=car.details%></p>   
+    <%if(car.author){%>
+        <b><p>By <%=car.author.firstName +" "+ car.author.lastName%> </p>  </b>
+    <%}%>            
+    </div>
+    <%if(user == car.author._id){%>
+    <form>
+        <button style="margin-left: 200px;width: 75px;"  type = "submit" formmethod = "GET" formaction = "/cars/<%=car.id%>/edit">Edit</button>
+        <button type = "submit" style="width: 75px;" formmethod = "POST" formaction = "/cars/<%=car.id%>?_method=DELETE">Delete</button>
+     </form>
+    <%}%>
+</body>
+
+<%- include('../partials/footer.ejs')   %>

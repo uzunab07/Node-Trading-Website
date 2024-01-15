@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs')   %>
+
+
+<body>
+    <form action="/cars" method="post" style=" width: 45%; margin-right: auto; margin-left: auto; ">
+        <label >Category</label>
+        <input type="text" required name="category" placeholder="Category" size="71 px" id="category"><br>
+        <label >Brand</label>
+        <input type="text" required name="brand" placeholder="Brand" size="71 px" id="brand" ><br>
+        <label >Model</label>
+        <input type="text" required name="model" placeholder="Model" size="71 px" id="model"><br>
+        <label >Image Url</label>
+        <input type="url" required name="img" placeholder="ulr"  minlength="10" id="url" class = "fixed-width" ><br>
+        <label >Details</label>
+        <textarea name="details" required cols="68" rows="20" id="details"></textarea><br>
+        <div style="text-align: right;">
+        <input type="submit" value="Create Trade" >
+    </div>
+    </form>
+</body>
+
+
+<%- include('../partials/footer.ejs')   %>
